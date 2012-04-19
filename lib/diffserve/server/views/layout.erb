@@ -5,8 +5,15 @@
   <title>Local diff for <%= @repo ? @repo.path : "Unknown" %></title>
   <link href="/reset.css" media="screen" rel="stylesheet" type="text/css">
   <link href="/style.css" media="screen" rel="stylesheet" type="text/css">
+
+  <script type="text/javascript">
+    function reloadPage() {
+        window.location.reload()
+    }
+  </script>
 </head>
 <body>
+<input type="button" value="Reload page" onclick="reloadPage()" />
 
 <div id="main">
   <%= yield %>
