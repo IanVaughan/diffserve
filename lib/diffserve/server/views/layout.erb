@@ -10,9 +10,14 @@
     function reloadPage() {
         window.location.reload()
     }
+    function timedRefresh(timeoutPeriod) {
+      setTimeout("location.reload(true);",timeoutPeriod);
+    }
   </script>
 </head>
 <body>
+<!--- body onload="JavaScript:timedRefresh(1000);" -->
+
 <input type="button" value="Reload page" onclick="reloadPage()" />
 
 <div id="main">
