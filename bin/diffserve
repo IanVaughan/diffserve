@@ -10,6 +10,5 @@ end
 require 'diffserve'
 
 Vegas::Runner.new(DiffServe::Server, 'diff-serve') do |runner, opts, app|
-
+  puts opts if ARGV.empty?
 end
-
