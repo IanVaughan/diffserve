@@ -14,7 +14,7 @@ module DiffServe
     end
 
     get "/" do
-      @repo = DiffServe::Git::Repository.locate
+      @repo = Git::Repository.locate
       if @repo
         @unified = Diff::Display::Unified.new(@repo.diff)
         erb :overview
